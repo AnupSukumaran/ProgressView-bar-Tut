@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var bnt: UIButton!
     
+    @IBOutlet weak var totalPeopleVoted: UITextField!
+    
+    @IBOutlet weak var numOfPeopleVotedForOneBox: UITextField!
+    
+    
+    var pepVotedForOneBox:Float = 0.0
+    var totPepVoted: Float = 0.0
     var isRed = false
     var progressBarTimer: Timer!
     var isRunning = false
@@ -21,6 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         progressView.progress = 0.0
         progressiveViewChanges()
+        totalPeopleVoted.text = "1000"
+        numOfPeopleVotedForOneBox.text = "555"
     }
     
     //MARK: making progressive View changes
@@ -33,6 +42,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func bnt(_ sender: Any) {
+        
+        totPepVoted = Float(totalPeopleVoted.text ?? "0.0") ?? 0.0
+        pepVotedForOneBox = Float(numOfPeopleVotedForOneBox.text ?? "0.0") ?? 0.0
+        print("totPepVoted = \(totPepVoted)")
+        print("pepVotedForOneBox = \(pepVotedForOneBox)")
         
         if isRunning {
           progressBarTimer.invalidate()
@@ -62,20 +76,22 @@ class ViewController: UIViewController {
             progressView.progressViewStyle = .bar
         }
     }
-    var TotalNum:Float = 3000
+   
     
     //MARK:
     func calcuForProgressView(inputNum: Float) -> Float {
-        let newNum = inputNum / TotalNum
-        print("newNum = newNum")
+        let newNum = inputNum / totPepVoted
+        print("newNum = \(newNum)")
         return newNum
     }
     
     @objc func updateProgressView(){
-        
-        progressView.progress += 0.1
+        let dividedNum = calcuForProgressView(inputNum: pepVotedForOneBox)
+        print("dividedNum = \(dividedNum)")
+       // progressView.progress += dividedNum
         UIView.animate(withDuration: 3, animations: { () -> Void in
-            self.progressView.setProgress(1.0, animated: true)
+         //   self.progressView.progress = dividedNum
+            self.progressView.setProgress(dividedNum, animated: true)
         })
     
         if(progressView.progress == 1.0)
@@ -84,6 +100,11 @@ class ViewController: UIViewController {
             isRunning = false
             bnt.setTitle("Start", for: .normal)
         }
+    }
+    
+    
+    @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
 

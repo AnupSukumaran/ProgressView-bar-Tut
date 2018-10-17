@@ -29,32 +29,62 @@
                                 <rect key="frame" x="32" y="307" width="311" height="53"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
-                                        <rect key="frame" x="-10" y="26" width="331" height="2.5"/>
+                                        <rect key="frame" x="0.0" y="26" width="311" height="2.5"/>
                                     </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="HCF-vk-geW"/>
-                                    <constraint firstAttribute="trailing" secondItem="WA9-Nr-yEP" secondAttribute="trailing" constant="-10" id="WrS-9L-mbh"/>
+                                    <constraint firstAttribute="trailing" secondItem="WA9-Nr-yEP" secondAttribute="trailing" id="WrS-9L-mbh"/>
                                     <constraint firstItem="WA9-Nr-yEP" firstAttribute="centerY" secondItem="F4S-ZC-o4D" secondAttribute="centerY" id="XpT-zH-QRs"/>
                                     <constraint firstAttribute="width" constant="311" id="gdB-aQ-oSu"/>
-                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" constant="-10" id="nwy-Wl-76z"/>
+                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" id="nwy-Wl-76z"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q9p-Hb-s3H">
+                                <rect key="frame" x="30" y="158" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-1f-8eo">
+                                <rect key="frame" x="30" y="196" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Qk-Bs-JtJ"/>
+                            <constraint firstItem="tIT-1f-8eo" firstAttribute="leading" secondItem="q9p-Hb-s3H" secondAttribute="leading" id="Bod-uK-8jr"/>
+                            <constraint firstItem="q9p-Hb-s3H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="KZF-mx-zo8"/>
                             <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LzG-Qu-8b9"/>
+                            <constraint firstItem="tIT-1f-8eo" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" id="MT2-k2-U1N"/>
+                            <constraint firstItem="tIT-1f-8eo" firstAttribute="top" secondItem="q9p-Hb-s3H" secondAttribute="bottom" constant="8" id="UZ8-uR-zHC"/>
+                            <constraint firstItem="q9p-Hb-s3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dkr-7D-s2v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" constant="30" id="myF-Mc-tVf"/>
+                            <constraint firstItem="q9p-Hb-s3H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ntX-at-Pb3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CFU-Jt-AcW" appends="YES" id="NTL-Y2-FHR"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="bnt" destination="yRh-MO-hC5" id="Pcd-QS-4cX"/>
+                        <outlet property="numOfPeopleVotedForOneBox" destination="tIT-1f-8eo" id="44I-xA-ehq"/>
                         <outlet property="progressView" destination="WA9-Nr-yEP" id="vZH-qz-9Kz"/>
+                        <outlet property="totalPeopleVoted" destination="q9p-Hb-s3H" id="M6K-6f-j1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CFU-Jt-AcW">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="3qq-Uk-dkW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="410.39999999999998" y="1.3493253373313345"/>
         </scene>
