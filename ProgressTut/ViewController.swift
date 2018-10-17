@@ -12,9 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var bnt: UIButton!
-    
     @IBOutlet weak var totalPeopleVoted: UITextField!
-    
     @IBOutlet weak var numOfPeopleVotedForOneBox: UITextField!
     
     
@@ -78,7 +76,7 @@ class ViewController: UIViewController {
     }
    
     
-    //MARK:
+    //MARK: To Get point number for the progress bae of scale 0.0 to 1.0
     func calcuForProgressView(inputNum: Float) -> Float {
         let newNum = inputNum / totPepVoted
         print("newNum = \(newNum)")
