@@ -29,7 +29,7 @@
                                 <rect key="frame" x="32" y="307" width="311" height="53"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
-                                        <rect key="frame" x="0.0" y="26" width="311" height="2.5"/>
+                                        <rect key="frame" x="-5" y="26" width="316" height="2.5"/>
                                     </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WA9-Nr-yEP" secondAttribute="trailing" id="WrS-9L-mbh"/>
                                     <constraint firstItem="WA9-Nr-yEP" firstAttribute="centerY" secondItem="F4S-ZC-o4D" secondAttribute="centerY" id="XpT-zH-QRs"/>
                                     <constraint firstAttribute="width" constant="311" id="gdB-aQ-oSu"/>
-                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" id="nwy-Wl-76z"/>
+                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" constant="-5" id="nwy-Wl-76z"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q9p-Hb-s3H">
