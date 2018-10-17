@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     //MARK: making progressive View changes
     func progressiveViewChanges() {
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 57)
-        
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
         progressView.layer.sublayers![1].cornerRadius = 10
@@ -62,6 +61,14 @@ class ViewController: UIViewController {
             progressView.progressTintColor = UIColor.red
             progressView.progressViewStyle = .bar
         }
+    }
+    var TotalNum:Float = 3000
+    
+    //MARK:
+    func calcuForProgressView(inputNum: Float) -> Float {
+        let newNum = inputNum / TotalNum
+        print("newNum = newNum")
+        return newNum
     }
     
     @objc func updateProgressView(){

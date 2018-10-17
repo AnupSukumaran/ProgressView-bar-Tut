@@ -28,11 +28,11 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-ZC-o4D">
                                 <rect key="frame" x="32" y="307" width="311" height="53"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
-                                        <rect key="frame" x="-10" y="25.5" width="331" height="2"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
+                                        <rect key="frame" x="-10" y="26" width="331" height="2.5"/>
                                     </progressView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="HCF-vk-geW"/>
                                     <constraint firstAttribute="trailing" secondItem="WA9-Nr-yEP" secondAttribute="trailing" constant="-10" id="WrS-9L-mbh"/>
