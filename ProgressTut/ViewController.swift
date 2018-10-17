@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressView.progress = 0.0
         progressiveViewChanges()
         totalPeopleVoted.text = "1000"
         numOfPeopleVotedForOneBox.text = "555"
@@ -34,6 +33,7 @@ class ViewController: UIViewController {
     
     //MARK: making progressive View changes
     func progressiveViewChanges() {
+        progressView.progress = 0.0
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 57)
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
