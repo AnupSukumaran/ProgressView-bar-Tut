@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
-                                <rect key="frame" x="32" y="332.5" width="311" height="2"/>
-                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-MO-hC5">
                                 <rect key="frame" x="170" y="374" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -28,13 +25,27 @@
                                     <action selector="bnt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kx-ZP-0fd"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-ZC-o4D">
+                                <rect key="frame" x="32" y="307" width="311" height="53"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Nr-yEP">
+                                        <rect key="frame" x="-10" y="25.5" width="331" height="2"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="HCF-vk-geW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WA9-Nr-yEP" secondAttribute="trailing" constant="-10" id="WrS-9L-mbh"/>
+                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="centerY" secondItem="F4S-ZC-o4D" secondAttribute="centerY" id="XpT-zH-QRs"/>
+                                    <constraint firstAttribute="width" constant="311" id="gdB-aQ-oSu"/>
+                                    <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" constant="-10" id="nwy-Wl-76z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="WA9-Nr-yEP" secondAttribute="trailing" constant="16" id="1MV-Ri-XIW"/>
-                            <constraint firstItem="WA9-Nr-yEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="4wX-bI-7P8"/>
-                            <constraint firstItem="WA9-Nr-yEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QVr-gG-MnV"/>
-                            <constraint firstItem="WA9-Nr-yEP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YTT-Wp-xaP"/>
+                            <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Qk-Bs-JtJ"/>
+                            <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LzG-Qu-8b9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,6 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="410.39999999999998" y="1.3493253373313345"/>
         </scene>
     </scenes>
 </document>

@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     //MARK: making progressive View changes
     func progressiveViewChanges() {
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 57)
+        
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
         progressView.layer.sublayers![1].cornerRadius = 10
