@@ -53,19 +53,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXe-eX-2gu">
+                                <rect key="frame" x="32" y="564" width="311" height="53"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIy-ur-uxR">
+                                <rect key="frame" x="311" y="526" width="32" height="30"/>
+                                <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGy-uf-WFt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="top" secondItem="GIy-ur-uxR" secondAttribute="bottom" constant="8" id="5Kc-qa-RjT"/>
                             <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Qk-Bs-JtJ"/>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="874-DX-kL5"/>
+                            <constraint firstItem="GIy-ur-uxR" firstAttribute="trailing" secondItem="GXe-eX-2gu" secondAttribute="trailing" id="8gg-oa-gsC"/>
                             <constraint firstItem="tIT-1f-8eo" firstAttribute="leading" secondItem="q9p-Hb-s3H" secondAttribute="leading" id="Bod-uK-8jr"/>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="trailing" secondItem="F4S-ZC-o4D" secondAttribute="trailing" id="HZf-sq-itD"/>
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="KZF-mx-zo8"/>
                             <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LzG-Qu-8b9"/>
                             <constraint firstItem="tIT-1f-8eo" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" id="MT2-k2-U1N"/>
                             <constraint firstItem="tIT-1f-8eo" firstAttribute="top" secondItem="q9p-Hb-s3H" secondAttribute="bottom" constant="8" id="UZ8-uR-zHC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GXe-eX-2gu" secondAttribute="trailing" constant="32" id="V8K-77-nwB"/>
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dkr-7D-s2v"/>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" id="fdz-0r-fvR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" constant="30" id="myF-Mc-tVf"/>
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ntX-at-Pb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GXe-eX-2gu" secondAttribute="bottom" constant="50" id="qyc-pV-cSC"/>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="height" secondItem="F4S-ZC-o4D" secondAttribute="height" id="uIV-2i-XYd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -77,6 +96,7 @@
                         <outlet property="numOfPeopleVotedForOneBox" destination="tIT-1f-8eo" id="44I-xA-ehq"/>
                         <outlet property="progressView" destination="WA9-Nr-yEP" id="vZH-qz-9Kz"/>
                         <outlet property="totalPeopleVoted" destination="q9p-Hb-s3H" id="M6K-6f-j1G"/>
+                        <outlet property="viewProg" destination="GXe-eX-2gu" id="fpt-dG-1zH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
