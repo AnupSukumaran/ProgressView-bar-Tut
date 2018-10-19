@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numOfPeopleVotedForOneBox: UITextField!
     @IBOutlet weak var viewProg: UIView!
     
+    @IBOutlet weak var labelTest: UILabel!
     
     var pepVotedForOneBox:Float = 0.0
     var totPepVoted: Float = 0.0
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
         let bezierPath = UIBezierPath(roundedRect: viewProg.bounds, cornerRadius: viewCornerRadius)
         bezierPath.close()
         borderLayer.path = bezierPath.cgPath
-        borderLayer.fillColor = UIColor.black.cgColor
+        borderLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         borderLayer.strokeEnd = 0
         viewProg.layer.addSublayer(borderLayer)
         
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
             progressLayer.fillColor = UIColor.white.cgColor
             borderLayer.addSublayer(self.progressLayer)
             
-           
+            viewProg.bringSubviewToFront(labelTest)
             
         }
         
@@ -105,22 +106,7 @@ class ViewController: UIViewController {
         changedBarColor()
         isRunning = !isRunning
         
-//        let dividedNum = calcuForProgressView(inputNum: pepVotedForOneBox)
-//        let width = viewProg.bounds.width
-//        let incre = CGFloat(dividedNum) * ((width) - 10)
-//        print(" incre = \(incre)😩")
-//        // progressView.progress += dividedNum
-//
-//    //    UIView.animate(withDuration: 3) {
-//            for i:CGFloat in stride(from: CGFloat(0), to: incre, by: 1) {
-//                print("i = \(i)😄")
-//
-//                self.rectProgress(incremented: i)
-//
-//
-//            }
-//       // }
-        
+
         
     }
     
@@ -141,20 +127,18 @@ class ViewController: UIViewController {
     }
    
     
-    //MARK: To Get point number for the progress bae of scale 0.0 to 1.0
+    //MARK: To Get point number for the progress bar of scale 0.0 to 1.0
     func calcuForProgressView(inputNum: Float) -> Float {
         let newNum = inputNum / totPepVoted
         print("newNum = \(newNum)")
         return newNum
     }
-    var incre: CGFloat = 0.0
     
+    var incre: CGFloat = 0.0
     @objc func updateProgressView(){
         let dividedNum = calcuForProgressView(inputNum: pepVotedForOneBox)
         print("dividedNum = \(dividedNum)")
-        
-       
-        
+
         UIView.animate(withDuration: 3, animations: { () -> Void in
          //   self.progressView.progress = dividedNum
             

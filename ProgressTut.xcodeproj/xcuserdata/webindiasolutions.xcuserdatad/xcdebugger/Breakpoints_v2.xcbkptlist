@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProgressTut/ViewController.swift"
-            timestampString = "561463718.488622"
+            timestampString = "561634476.40091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "bnt(_:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "drawProgressLayer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProgressTut/ViewController.swift"
-            timestampString = "561463718.488732"
+            timestampString = "561634476.401342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "updateProgressView()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "bnt(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProgressTut/ViewController.swift"
-            timestampString = "561463718.488791"
+            timestampString = "561634476.401607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "calcuForProgressView(inputNum:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "progressiveViewChanges()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

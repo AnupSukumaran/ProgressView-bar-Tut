@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A156F85217840C500A617AD /* UIProgressBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A156F84217840C500A617AD /* UIProgressBar+Extension.swift */; };
+		6F5A63042179B7E800A110E8 /* ViewShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A63032179B7E800A110E8 /* ViewShapeLayer.swift */; };
 		6F65B7FD21770F3D005A091F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65B7FC21770F3D005A091F /* AppDelegate.swift */; };
 		6F65B7FF21770F3D005A091F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65B7FE21770F3D005A091F /* ViewController.swift */; };
 		6F65B80221770F3D005A091F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F65B80021770F3D005A091F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5A156F84217840C500A617AD /* UIProgressBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIProgressBar+Extension.swift"; sourceTree = "<group>"; };
+		6F5A63032179B7E800A110E8 /* ViewShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShapeLayer.swift; sourceTree = "<group>"; };
 		6F65B7F921770F3D005A091F /* ProgressTut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressTut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F65B7FC21770F3D005A091F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F65B7FE21770F3D005A091F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				6F65B80321770F49005A091F /* Assets.xcassets */,
 				6F65B80521770F49005A091F /* LaunchScreen.storyboard */,
 				6F65B80821770F49005A091F /* Info.plist */,
+				6F5A63032179B7E800A110E8 /* ViewShapeLayer.swift */,
 			);
 			path = ProgressTut;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5A63042179B7E800A110E8 /* ViewShapeLayer.swift in Sources */,
 				5A156F85217840C500A617AD /* UIProgressBar+Extension.swift in Sources */,
 				6F65B7FF21770F3D005A091F /* ViewController.swift in Sources */,
 				6F65B7FD21770F3D005A091F /* AppDelegate.swift in Sources */,
@@ -286,8 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDRMVW96A6;
+				DEVELOPMENT_TEAM = WJA3TXPFS7;
 				INFOPLIST_FILE = ProgressTut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +300,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TechTonic.ProgressTut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,8 +310,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDRMVW96A6;
+				DEVELOPMENT_TEAM = WJA3TXPFS7;
 				INFOPLIST_FILE = ProgressTut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TechTonic.ProgressTut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

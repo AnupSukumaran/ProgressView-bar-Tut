@@ -55,7 +55,20 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXe-eX-2gu">
                                 <rect key="frame" x="32" y="564" width="311" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-mP-fEa">
+                                        <rect key="frame" x="8" y="16" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.03441116066703731" green="0.17683602372240048" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QSO-mP-fEa" firstAttribute="top" secondItem="GXe-eX-2gu" secondAttribute="top" constant="16" id="LOq-ZA-2VL"/>
+                                    <constraint firstAttribute="bottom" secondItem="QSO-mP-fEa" secondAttribute="bottom" constant="16" id="X2v-4j-2To"/>
+                                    <constraint firstItem="QSO-mP-fEa" firstAttribute="leading" secondItem="GXe-eX-2gu" secondAttribute="leading" constant="8" id="ZzH-jK-KVG"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIy-ur-uxR">
                                 <rect key="frame" x="311" y="526" width="32" height="30"/>
@@ -93,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="bnt" destination="yRh-MO-hC5" id="Pcd-QS-4cX"/>
+                        <outlet property="labelTest" destination="QSO-mP-fEa" id="Qdp-YI-k9l"/>
                         <outlet property="numOfPeopleVotedForOneBox" destination="tIT-1f-8eo" id="44I-xA-ehq"/>
                         <outlet property="progressView" destination="WA9-Nr-yEP" id="vZH-qz-9Kz"/>
                         <outlet property="totalPeopleVoted" destination="q9p-Hb-s3H" id="M6K-6f-j1G"/>
