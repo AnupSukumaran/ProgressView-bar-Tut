@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         borderLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         borderLayer.strokeEnd = 0
         viewProg.layer.addSublayer(borderLayer)
-        
+        viewProg.bringSubviewToFront(labelTest)
         
     }
     
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             progressLayer.fillColor = UIColor.white.cgColor
             borderLayer.addSublayer(self.progressLayer)
             
-            viewProg.bringSubviewToFront(labelTest)
+          
             
         }
         
