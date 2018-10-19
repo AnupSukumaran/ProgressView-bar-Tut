@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         borderLayer.strokeEnd = 0
         viewProg.layer.addSublayer(borderLayer)
         
-        
+        viewProg.bringSubviewToFront(labelTest)
     }
     
     //Make sure the value that you want in the function `rectProgress` that is going to define
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             progressLayer.fillColor = UIColor.white.cgColor
             borderLayer.addSublayer(self.progressLayer)
             
-            viewProg.bringSubviewToFront(labelTest)
+            
             
         }
         
@@ -157,10 +157,12 @@ class ViewController: UIViewController {
         let width = viewProg.bounds.width
         let newVal = CGFloat(dividedNum) * ((width) - 10)
         
+        self.rectProgress(incremented: 61.0)
+        
         if incre <= CGFloat(newVal) {
             incre += 1
             print("Incre = \(incre)")
-            self.rectProgress(incremented: incre)
+            
         } else {
               progressBarTimer.invalidate()
         }
