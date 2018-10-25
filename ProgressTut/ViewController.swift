@@ -14,9 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var bnt: UIButton!
     @IBOutlet weak var totalPeopleVoted: UITextField!
     @IBOutlet weak var numOfPeopleVotedForOneBox: UITextField!
-    @IBOutlet weak var viewProg: UIView!
+//    @IBOutlet weak var viewProg: UIView!
+//    @IBOutlet weak var viewProg1: UIView!
     
-    @IBOutlet weak var labelTest: UILabel!
+    @IBOutlet var viewsCollec: [UIView]!
+    
+    @IBOutlet var labels: [UILabel]!
+//    @IBOutlet weak var labelTest: UILabel!
+//    @IBOutlet weak var label1Test: UILabel!
     
     var pepVotedForOneBox:Float = 0.0
     var totPepVoted: Float = 0.0
@@ -25,9 +30,12 @@ class ViewController: UIViewController {
     var isRunning = false
     
     let viewCornerRadius : CGFloat = 5
-    var borderLayer : CAShapeLayer = CAShapeLayer()
-    let progressLayer : CAShapeLayer = CAShapeLayer()
-    
+//    var borderLayer : CAShapeLayer = CAShapeLayer()
+//    let progressLayer : CAShapeLayer = CAShapeLayer()
+//    var borderLayer1 : CAShapeLayer = CAShapeLayer()
+//    let progressLayer1 : CAShapeLayer = CAShapeLayer()
+    var borderLayers: [CAShapeLayer] = [CAShapeLayer(), CAShapeLayer()]
+    let progressLayers: [CAShapeLayer] = [CAShapeLayer(), CAShapeLayer()]
     override func viewDidLoad() {
         super.viewDidLoad()
         progressiveViewChanges()
@@ -38,44 +46,101 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        drawProgressLayer()
+        //drawProgressLayer()
+        for i in 0..<viewsCollec.count {
+            drawProgressLayer(index: i)
+        }
     }
     
-    func drawProgressLayer(){
+    func drawProgressLayer(index: Int){
         
-        let bezierPath = UIBezierPath(roundedRect: viewProg.bounds, cornerRadius: viewCornerRadius)
+        let bezierPath = UIBezierPath(roundedRect: viewsCollec[index].bounds, cornerRadius: viewCornerRadius)
         bezierPath.close()
-        borderLayer.path = bezierPath.cgPath
-        borderLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        borderLayer.strokeEnd = 0
-        viewProg.layer.addSublayer(borderLayer)
-        viewProg.bringSubviewToFront(labelTest)
+        
+        borderLayers[index].path = bezierPath.cgPath
+        borderLayers[index].fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        borderLayers[index].strokeEnd = 0
+        viewsCollec[index].layer.addSublayer(borderLayers[index])
+        viewsCollec[index].bringSubviewToFront(labels[0])
+        
+       
         
     }
+    
+//    func drawProgressLayer(){
+//
+//        let bezierPath = UIBezierPath(roundedRect: viewProg.bounds, cornerRadius: viewCornerRadius)
+//        bezierPath.close()
+//
+//        borderLayer.path = bezierPath.cgPath
+//        borderLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+//        borderLayer.strokeEnd = 0
+//        viewProg.layer.addSublayer(borderLayer)
+//        viewProg.bringSubviewToFront(labelTest)
+//
+//        let bezierPath1 = UIBezierPath(roundedRect: viewProg1.bounds, cornerRadius: viewCornerRadius)
+//        bezierPath1.close()
+//
+//        borderLayer1.path = bezierPath1.cgPath
+//        borderLayer1.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+//        borderLayer1.strokeEnd = 0
+//        viewProg1.layer.addSublayer(borderLayer1)
+//        viewProg1.bringSubviewToFront(label1Test)
+//
+//    }
     
     //Make sure the value that you want in the function `rectProgress` that is going to define
     //the width of your progress bar must be in the range of
     // 0 <--> viewProg.bounds.width - 10 , reason why to keep the layer inside the view with some border left spare.
     //if you are receiving your progress values in 0.00 -- 1.00 range , just multiply your progress values to viewProg.bounds.width - 10 and send them as *incremented:* parameter in this func
     
-    func rectProgress(incremented : CGFloat){
+    
+    func rectProgress(incremented : CGFloat, index: Int){
         
-       // print("incremented = \(incremented)")
-        if incremented <= viewProg.bounds.width - 10{
-            progressLayer.removeFromSuperlayer()
-            let rect = CGRect(x: 5, y: 5, width: incremented, height: viewProg.bounds.height - 10)
+        // print("incremented = \(incremented)")
+        if incremented <= viewsCollec[index].bounds.width - 10{
+            progressLayers[index].removeFromSuperlayer()
+            let rect = CGRect(x: 5, y: 5, width: incremented, height: viewsCollec[index].bounds.height - 10)
             let bezierPathProg = UIBezierPath(roundedRect: rect , cornerRadius: viewCornerRadius)
             bezierPathProg.close()
             
-            progressLayer.path = bezierPathProg.cgPath
-            progressLayer.fillColor = UIColor.white.cgColor
-            borderLayer.addSublayer(self.progressLayer)
+        
+            progressLayers[index].path = bezierPathProg.cgPath
+            progressLayers[index].fillColor = UIColor.white.cgColor
+            borderLayers[index].addSublayer(progressLayers[index])
             
-          
+        
+            
             
         }
         
     }
+    
+//    func rectProgress(incremented : CGFloat){
+//
+//       // print("incremented = \(incremented)")
+//        if incremented <= viewProg.bounds.width - 10{
+//            progressLayer.removeFromSuperlayer()
+//            let rect = CGRect(x: 5, y: 5, width: incremented, height: viewProg.bounds.height - 10)
+//            let bezierPathProg = UIBezierPath(roundedRect: rect , cornerRadius: viewCornerRadius)
+//            bezierPathProg.close()
+//
+//            let rect1 = CGRect(x: 5, y: 5, width: incremented, height: viewProg1.bounds.height - 10)
+//            let bezierPathProg1 = UIBezierPath(roundedRect: rect1 , cornerRadius: viewCornerRadius)
+//            bezierPathProg1.close()
+//
+//            progressLayer.path = bezierPathProg.cgPath
+//            progressLayer.fillColor = UIColor.white.cgColor
+//            borderLayer.addSublayer(self.progressLayer)
+//
+//            progressLayer1.path = bezierPathProg1.cgPath
+//            progressLayer1.fillColor = UIColor.white.cgColor
+//            borderLayer1.addSublayer(self.progressLayer1)
+//
+//
+//        }
+//
+//    }
     
     //MARK: making progressive View changes
     func progressiveViewChanges() {
@@ -154,13 +219,14 @@ class ViewController: UIViewController {
             bnt.setTitle("Start", for: .normal)
         }
         
-        let width = viewProg.bounds.width
+        let width = viewsCollec[0].bounds.width
         let newVal = CGFloat(dividedNum) * ((width) - 10)
         
         if incre <= CGFloat(newVal) {
             incre += 1
             print("Incre = \(incre)")
-            self.rectProgress(incremented: incre)
+            self.rectProgress(incremented: incre, index: 0)
+            self.rectProgress(incremented: incre, index: 1)
         } else {
               progressBarTimer.invalidate()
         }
@@ -174,7 +240,7 @@ class ViewController: UIViewController {
     var increment: CGFloat = 0.0
     @IBAction func addAction(_ sender: Any) {
         increment += 1.0
-        self.rectProgress(incremented: increment)
+      //  self.rectProgress(incremented: increment)
     }
     
 

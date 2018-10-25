@@ -77,6 +77,23 @@
                                     <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGy-uf-WFt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnh-1i-jgG">
+                                <rect key="frame" x="32" y="465" width="311" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-9o-m9l">
+                                        <rect key="frame" x="8" y="16" width="49.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.034411160670000003" green="0.17683602370000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Bey-9o-m9l" firstAttribute="top" secondItem="Hnh-1i-jgG" secondAttribute="top" constant="16" id="DfT-Px-dq5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bey-9o-m9l" secondAttribute="bottom" constant="16" id="EDx-dZ-hKc"/>
+                                    <constraint firstItem="Bey-9o-m9l" firstAttribute="leading" secondItem="Hnh-1i-jgG" secondAttribute="leading" constant="8" id="UWn-X0-2Nr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -90,10 +107,14 @@
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="KZF-mx-zo8"/>
                             <constraint firstItem="F4S-ZC-o4D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LzG-Qu-8b9"/>
                             <constraint firstItem="tIT-1f-8eo" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" id="MT2-k2-U1N"/>
+                            <constraint firstItem="Hnh-1i-jgG" firstAttribute="height" secondItem="GXe-eX-2gu" secondAttribute="height" id="McK-mQ-A2d"/>
                             <constraint firstItem="tIT-1f-8eo" firstAttribute="top" secondItem="q9p-Hb-s3H" secondAttribute="bottom" constant="8" id="UZ8-uR-zHC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GXe-eX-2gu" secondAttribute="trailing" constant="32" id="V8K-77-nwB"/>
+                            <constraint firstItem="Hnh-1i-jgG" firstAttribute="leading" secondItem="GXe-eX-2gu" secondAttribute="leading" id="Yla-2N-OCM"/>
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dkr-7D-s2v"/>
+                            <constraint firstItem="Hnh-1i-jgG" firstAttribute="trailing" secondItem="GXe-eX-2gu" secondAttribute="trailing" id="eod-rt-Qnu"/>
                             <constraint firstItem="GXe-eX-2gu" firstAttribute="leading" secondItem="F4S-ZC-o4D" secondAttribute="leading" id="fdz-0r-fvR"/>
+                            <constraint firstItem="GXe-eX-2gu" firstAttribute="top" secondItem="Hnh-1i-jgG" secondAttribute="bottom" constant="46" id="jGJ-xn-bfG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9p-Hb-s3H" secondAttribute="trailing" constant="30" id="myF-Mc-tVf"/>
                             <constraint firstItem="q9p-Hb-s3H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ntX-at-Pb3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GXe-eX-2gu" secondAttribute="bottom" constant="50" id="qyc-pV-cSC"/>
@@ -106,11 +127,13 @@
                     </view>
                     <connections>
                         <outlet property="bnt" destination="yRh-MO-hC5" id="Pcd-QS-4cX"/>
-                        <outlet property="labelTest" destination="QSO-mP-fEa" id="Qdp-YI-k9l"/>
                         <outlet property="numOfPeopleVotedForOneBox" destination="tIT-1f-8eo" id="44I-xA-ehq"/>
                         <outlet property="progressView" destination="WA9-Nr-yEP" id="vZH-qz-9Kz"/>
                         <outlet property="totalPeopleVoted" destination="q9p-Hb-s3H" id="M6K-6f-j1G"/>
-                        <outlet property="viewProg" destination="GXe-eX-2gu" id="fpt-dG-1zH"/>
+                        <outletCollection property="viewsCollec" destination="Hnh-1i-jgG" collectionClass="NSMutableArray" id="agk-dE-FFO"/>
+                        <outletCollection property="viewsCollec" destination="GXe-eX-2gu" collectionClass="NSMutableArray" id="jn0-4B-P5f"/>
+                        <outletCollection property="labels" destination="QSO-mP-fEa" collectionClass="NSMutableArray" id="1UK-nn-Hyf"/>
+                        <outletCollection property="labels" destination="Bey-9o-m9l" collectionClass="NSMutableArray" id="g0W-Ag-SiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
